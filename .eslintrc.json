@@ -18,20 +18,20 @@
         "ecmaVersion": 6
     },
     "rules": {
-        "indent": [
-            2,
-            2
-        ],
+        // "indent": [
+        //     2,
+        //     2
+        // ],
         "semi": [
             "error",
             "always"
-        ]
+        ],
         //"no-unused-vars": "off",
         //"no-multiple-empty-lines": "off",
         //"eol-last": "off",
         //"no-sequence": "never",
         //"standard-property-even-spacing": "never",
-        // "quotes": ["error", "double"],
+        //"quotes": ["error", "double"],
         //"comma-dangle": ["error", "never"],
         //"no-const-assign": "error",
         //"prefer-const": "error",
@@ -42,5 +42,6 @@
         //"no-var": "error",
         //"prefer-const": "error",
         //"max-len": ["error", 120]
+        "indent": "off"
     }
 }

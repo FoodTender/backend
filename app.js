@@ -1,12 +1,25 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+// PACKAGES REQUIRED
+const express = require('express');
+// const path = require('path');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
 
-var index = require('./routes/index');
+// ROUTES REQUIRED
+const index = require('./routes/index');
 
-var app = express();
+// EXPRESS
+const app = express();
+
+// MONGOOSE CONFIG
+mongoose.Promise = Promise;
+mongoose.connect('mongodb://localhost/foodtender', {
+  keepAlive: true,
+  reconnectTries: Number.MAX_VALUE,
+  useMongoClient: true
+});
 
 // uncomment after placing your favicon in /public
 app.use(logger('dev'));
@@ -17,7 +30,7 @@ app.use(cookieParser());
 app.use('/', index);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function (req, res, next, err) {
   res.json({ error: 'Not found' });
   err.status(404);
 });
