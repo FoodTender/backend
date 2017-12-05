@@ -33,6 +33,26 @@ const ingredients = [
     basic: true
   },
   {
+    name: 'White sugar',
+    basic: true
+  },
+  {
+    name: 'Vanilla Extract',
+    basic: true
+  },
+  {
+    name: 'Milk',
+    basic: true
+  },
+  {
+    name: 'Sweetened Condensed Milk',
+    basic: false
+  },
+  {
+    name: 'Heavy Cream',
+    basic: false
+  },
+  {
     name: 'Egg',
     basic: false
   },
