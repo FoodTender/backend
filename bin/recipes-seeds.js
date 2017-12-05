@@ -4,14 +4,12 @@ mongoose.connect('mongodb://localhost/foodtender');
 const Recipe = require('../models/recipe');
 const Ingredient = require('../models/ingredient');
 
-
 const recipes = [
     // --- Basic Omelette --- //
     {
         name: 'Basic Omelette',
-
         ingredients: [{
-            ingredient: "Egg", // Egg
+            ingredient: 'Egg', // Egg
             quantity: 3,
             unit: 'Beaten'
         },
@@ -21,7 +19,7 @@ const recipes = [
             unit: 'tsp'
         },
         {
-            ingredient: "Butter",
+            ingredient: 'Butter',
             quantity: 1,
             unit: 'tsp'
         }
@@ -57,67 +55,67 @@ const recipes = [
         name: 'Classic spaghetti Bolognese',
 
         ingredients: [{
-            ingredient: "Onion",
+            ingredient: 'Onion',
             quantity: 2,
             unit: 'Medium Size peeled and chopped'
         },
         {
-            ingredient: "Olive Oil",
+            ingredient: 'Olive Oil',
             quantity: 1,
             unit: 'tbsp'
         },
         {
-            ingredient: "Garlic",
+            ingredient: 'Garlic',
             quantity: 1,
             unit: 'Clove, peeled and crushed'
         },
         {
-            ingredient: "Beef Minced",
+            ingredient: 'Beef Minced',
             quantity: 500,
             unit: 'g'
         },
         {
-            ingredient: "Mushroom",
+            ingredient: 'Mushroom',
             quantity: 90,
             unit: 'g sliced'
         },
         {
-            ingredient: "Herbs",
+            ingredient: 'Herbs',
             quantity: 1,
             unit: 'tbsp'
         },
         {
-            ingredient: "Tomato",
+            ingredient: 'Tomato',
             quantity: 400,
             unit: 'g chopped'
         },
         {
-            ingredient: "Stock Beef",
+            ingredient: 'Stock Beef',
             quantity: 300,
             unit: 'ml hot'
         },
         {
-            ingredient: "Tomato Sauce",
+            ingredient: 'Tomato Sauce',
             quantity: 1,
             unit: 'tbsp'
         },
         {
-            ingredient: "Salt",
+            ingredient: 'Salt',
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: "Black Pepper",
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: "Spaghetti",
+            ingredient: 'Spaghetti',
             quantity: 350,
             unit: 'g'
         },
         {
-            ingredient: "Cheese Parmesan",
+            ingredient: 'Cheese Parmesan',
             quantity: null,
             unit: null
         }
@@ -163,39 +161,38 @@ const recipes = [
         difficulty: 'Not so easy',
         calories: 640
     },
-    ,
 
     // --- 3 minutes mug cacke --- //
     {
         name: '3 minutes mug cake',
 
         ingredients: [{
-            ingredient: "Flour",
+            ingredient: 'Flour',
             quantity: 4,
             unit: 'tbps'
         },
         {
-            ingredient: "Sugar",
+            ingredient: 'Sugar',
             quantity: 4,
             unit: 'tbsp'
         },
         {
-            ingredient: "Cocoa",
+            ingredient: 'Cocoa',
             quantity: 2,
             unit: 'tbsp'
         },
         {
-            ingredient: "Egg",
+            ingredient: 'Egg',
             quantity: 1,
             unit: 'big'
         },
         {
-            ingredient: "Milk",
+            ingredient: 'Milk',
             quantity: 3,
             unit: 'tbsp'
         },
         {
-            ingredient: "Olive Oil",
+            ingredient: 'Olive Oil',
             quantity: 3,
             unit: 'tbsp'
         }
@@ -228,27 +225,27 @@ const recipes = [
         name: 'Cuban Rice',
         ingredients: [
             {
-                ingredient: "Tomato Sauce",
+                ingredient: 'Tomato Sauce',
                 quantity: 1,
                 unit: 'cup'
             },
             {
-                ingredient: "Olive Oil",
+                ingredient: 'Olive Oil',
                 quantity: 3,
                 unit: 'tbsp'
             },
             {
-                ingredient: "Water",
+                ingredient: 'Water',
                 quantity: 3.5,
                 unit: 'cups'
             },
             {
-                ingredient: "Salt",
+                ingredient: 'Salt',
                 quantity: 1,
                 unit: 'pinch'
             },
             {
-                ingredient: "Egg",
+                ingredient: 'Egg',
                 quantity: 4,
                 unit: 'Large ones'
             }
@@ -293,32 +290,32 @@ const recipes = [
         name: 'Spanish Flan',
 
         ingredients: [{
-            ingredient: "Sugar",
+            ingredient: 'Sugar',
             quantity: 2 / 3,
             unit: 'cup'
         },
         {
-            ingredient: "Egg",
+            ingredient: 'Egg',
             quantity: 5,
             unit: 'room-temperature'
         },
         {
-            ingredient: "Sweetened Condensed Milk",
+            ingredient: 'Sweetened Condensed Milk',
             quantity: 1,
             unit: 'can'
         },
         {
-            ingredient: "Heavy Cream",
+            ingredient: 'Heavy Cream',
             quantity: 2,
             unit: 'cups'
         },
         {
-            ingredient: "Milk",
+            ingredient: 'Milk',
             quantity: 1,
             unit: 'cup'
         },
         {
-            ingredient: "Vanilla Extract",
+            ingredient: 'Vanilla Extract',
             quantity: 2,
             unit: 'tsp'
         }
@@ -354,47 +351,47 @@ const recipes = [
         name: 'Chicken Cordon Bleu',
 
         ingredients: [{
-            ingredient: "Breadcrumbs",
+            ingredient: 'Breadcrumbs',
             quantity: 1 / 2,
             unit: 'cup'
         },
         {
-            ingredient: "Chicken Breast",
+            ingredient: 'Chicken Breast',
             quantity: 2,
             unit: 'small'
         },
         {
-            ingredient: "Cheese Swiss",
+            ingredient: 'Cheese Swiss',
             quantity: 4,
             unit: 'slices'
         },
         {
-            ingredient: "Ham",
+            ingredient: 'Ham',
             quantity: 4,
             unit: 'slices'
         },
         {
-            ingredient: "Egg",
+            ingredient: 'Egg',
             quantity: 1,
             unit: null
         },
         {
-            ingredient: "Flour",
+            ingredient: 'Flour',
             quantity: 1,
             unit: 'tsp'
         },
         {
-            ingredient: "Olive Oil",
+            ingredient: 'Olive Oil',
             quantity: null,
             unit: null
         },
         {
-            ingredient: "Salt",
+            ingredient: 'Salt',
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: "Black Pepper",
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'pinch'
         }
@@ -424,25 +421,25 @@ const recipes = [
     }
 ];
 
-function populateRecipeIngredient(recipe, index) {
+function populateRecipeIngredient (recipe, index) {
     const name = recipe.ingredients[index].ingredient;
     return Ingredient.findOne({ name: name })
         .then(ingredient => {
             if (!ingredient) {
-                return Promise.reject("Ingredient " + name + " does not exist in recipe " + recipe.name);
+                return Promise.reject('Ingredient ' + name + ' does not exist in recipe ' + recipe.name);
             }
             recipe.ingredients[index].ingredient = ingredient._id;
         });
 }
 
-function populateRecipeIngredients(recipe) {
+function populateRecipeIngredients (recipe) {
     const promises = recipe.ingredients.map((ingredient, index) => {
         return populateRecipeIngredient(recipe, index);
     });
     return Promise.all(promises);
 }
 
-function deleteAllRecipes() {
+function deleteAllRecipes () {
     return Recipe.remove({})
         .then(() => {
             console.log('Deleted all recipes');
@@ -453,11 +450,11 @@ function deleteAllRecipes() {
         });
 }
 
-function createRecipes() {
+function createRecipes () {
     const promises = recipes.map(recipe => {
         return populateRecipeIngredients(recipe)
             .then(() => {
-                console.log("Going to create " + recipe.name);
+                console.log('Going to create ' + recipe.name);
                 return Recipe.create(recipe);
             }).then(() => {
                 console.log('Success: ' + recipe.name);
@@ -466,7 +463,6 @@ function createRecipes() {
 
     return Promise.all(promises);
 }
-
 
 deleteAllRecipes()
     .then(() => createRecipes())
@@ -479,5 +475,3 @@ deleteAllRecipes()
         mongoose.connection.close();
         process.exit();
     });
-
-
