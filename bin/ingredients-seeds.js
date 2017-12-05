@@ -1,4 +1,4 @@
-const Ingredients = require('../models/ingredient').Recipe;
+const Ingredient = require('../models/ingredient').Ingredient;
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/foodtender');
 
@@ -6,6 +6,10 @@ const ingredients = [
 
   {
     name: 'Sunflower Oil',
+    basic: true
+  },
+  {
+    name: 'Water',
     basic: true
   },
   {
@@ -83,6 +87,29 @@ const ingredients = [
   {
     name: 'Cheese Parmesan',
     basic: false
+  },
+  {
+    name: 'Milk',
+    basic: false
+  },
+  {
+    name: 'Cocoa',
+    basic: false
+  },
+  {
+    name: 'Sugar',
+    basic: false
+  },
+  {
+    name: 'Flour',
+    basic: false
   }
 
 ];
+
+Ingredient.create(ingredients, (err, ingredients) => {
+  if (err) { throw (err); }
+  console.log('Success', ingredients);
+  mongoose.connection.close();
+})
+;
