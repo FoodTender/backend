@@ -169,8 +169,8 @@ const recipes = [
         picture: '/recipes/flan.jpg',
         time: '1h 20m',
         servings: 8,
-        directions: `Preheat oven to 350 degrees F (175 degrees C).
-        In a small nonstick saucepan, heat the sugar over medium heat. 
+        directions: `1. Preheat oven to 350 degrees F (175 degrees C).
+        2. In a small nonstick saucepan, heat the sugar over medium heat. 
         Shake and swirl occasionally to distribute sugar until it is 
         dissolved and begins to brown. Lift the pan over the heat source 
         (4 to 6 inches) and continue to brown the sugar until it becomes 
@@ -178,11 +178,11 @@ const recipes = [
         continually stirring causes the sugar to crystallize. Pour 
         caramelized sugar into a 1 1/2 quart casserole dish or a large 
         loaf pan, and swirl to coat the bottom of the pan evenly.
-        In a blender, combine sweetened condensed milk, cream, milk, 
+        2. In a blender, combine sweetened condensed milk, cream, milk, 
         eggs and vanilla. Blend on high for one minute. Pour over the 
         caramelized sugar. Place the filled casserole dish into a larger 
-        pan and add 1 inch of HOT water to the outer pan. Bake in preheated 
-        oven for 50 to 60 minutes, or until set.`,
+        pan and add 1 inch of HOT water to the outer pan. 
+        3. Bake in preheated oven for 50 to 60 minutes, or until set.`,
         ratings: 0,
         difficulty: 'Easy Peasy',
         calories: 490
@@ -241,20 +241,20 @@ const recipes = [
         picture: '/recipes/chicken-cordon-bleu.jpg',
         time: '45min',
         servings: 2,
-        directions: `Preheat oven to 180C/350F.
-        Spread panko breadcrumbs on a baking tray and spray with oil. 
+        directions: `1. Preheat oven to 180C/350F.
+        2. Spread breadcrumbs on a baking tray and spray with oil. 
         Bake for 3 minutes or until light golden. Remove and scrape 
         into bowl straight away.
-        Cut a pocket into each chicken breast, as per the photo below.
+        3. Cut a pocket into each chicken breast.
         Fold the cheese in half and place 2 pieces inside each pocket. 
         Do the same with the ham. Close the pocket, seal with toothpicks.
         Sprinkle with salt and pepper.
-        Whisk egg and flour. Dip chicken into egg mixture, then into the 
-        panko breadcrumbs. Transfer to tray, spray with oil.
+        4. Whisk egg and flour. Dip chicken into egg mixture, then into the 
+        breadcrumbs. Transfer to tray, spray with oil.
         Bake for 25 to 30 minutes, or until golden brown and just cooked 
         through. Rest for 5 minutes before serving with the Dijon Cream Sauce.`,
         ratings: 0,
-        difficulty: '',
+        difficulty: 'Not so easy',
         calories: 590
     },
 ];
