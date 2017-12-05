@@ -5,9 +5,7 @@ const ingredientSchema = new Schema({
   name: String,
   basic: Boolean
 }, {
-  timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
-});
+    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
+  });
 
-const Ingredient = mongoose.model('Ingredient', ingredientSchema);
-
-module.exports = Ingredient;
+module.exports = mongoose.model('Ingredient', ingredientSchema);

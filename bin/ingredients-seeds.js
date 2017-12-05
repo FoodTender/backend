@@ -1,4 +1,4 @@
-const Ingredient = require('../models/ingredient').Ingredient;
+const Ingredient = require('../models/ingredient');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/foodtender');
 
@@ -132,4 +132,4 @@ Ingredient.create(ingredients, (err, ingredients) => {
   console.log('Success', ingredients);
   mongoose.connection.close();
 })
-;
+  ;

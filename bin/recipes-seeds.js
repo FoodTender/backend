@@ -1,4 +1,4 @@
-const Recipe = require('../models/recipe').Recipe;
+const Recipe = require('../models/recipe');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/foodtender');
 
