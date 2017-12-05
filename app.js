@@ -30,18 +30,20 @@ app.use(cookieParser());
 app.use('/', index);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next, err) {
-  res.json({ error: 'Not found' });
-  err.status(404);
+app.use(function (req, res, next) {
+  res.status(404);
+  res.json({error: 'Page not Found'});
 });
 
-// error handler
+// NOTE: requires a views/error.ejs template
 app.use(function (err, req, res, next) {
+  // always log the error
   console.error('ERROR', req.method, req.path, err);
 
+  // only render if the error ocurred before sending the response
   if (!res.headersSent) {
     res.status(500);
-    res.json({ error: 'error.unexpected' });
+    res.json({error: 'Unexpected error'});
   }
 });
 
