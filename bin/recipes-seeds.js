@@ -192,15 +192,21 @@ const recipes = [
     }
 ],
 
-    picture: '/recipes/omelette.jpg',
+    picture: '/recipes/3-minutes-mug-cake.jpg',
     time: '3 minutes',
     servings: 1,
     directions: `1. Pour all the ingredients in the mug and mix until it's homogeneous.
+
     2. Add the egg and keep on mixing.
+
     3. Pour the milk and the oil and keep shaking!
+
     4. In case you have some chocolate or vanilla extract, use it now and mix a little bit more.
+
     5. Put your mug in the microwave and cook for 3 minutes at 1000v (high). 
+
     6. Add toppings of your choice (In case you have them).
+
     6. Let it cool unless you want to burn your tongue!`,
     ratings: 0,
     difficulty: 'Easy Peasy',
@@ -267,7 +273,139 @@ const recipes = [
     ratings: 0,
     difficulty: 'Not so easy',
     calories: 264
-  }
+  },
+  {
+    name: 'Spanish Flan',
+
+    ingredients: [{
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // WHITE SUGAR
+        quantity: 2 / 3,
+        unit: 'cup'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // EGGS
+        quantity: 5,
+        unit: 'room-temperature'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SWEETENED CONDENSED MILK
+        quantity: 1,
+        unit: 'can'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // HEAVY CREAM
+        quantity: 2,
+        unit: 'cups'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // MILK
+        quantity: 1,
+        unit: 'cup'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // VANILLA EXTRACT
+        quantity: 2,
+        unit: 'tsp'
+    }
+    ],
+
+    picture: '/recipes/spanish-flan.jpg',
+    time: '1h 20m',
+    servings: 8,
+    directions: `1. Preheat oven to 350 degrees F (175 degrees C).
+    
+    2. In a small nonstick saucepan, heat the sugar over medium heat. 
+    Shake and swirl occasionally to distribute sugar until it is 
+    dissolved and begins to brown. Lift the pan over the heat source 
+    (4 to 6 inches) and continue to brown the sugar until it becomes 
+    a dark golden brown. You may slightly stir while cooking, but 
+    continually stirring causes the sugar to crystallize. Pour 
+    caramelized sugar into a 1 1/2 quart casserole dish or a large 
+    loaf pan, and swirl to coat the bottom of the pan evenly.
+    
+    3. In a blender, combine sweetened condensed milk, cream, milk, 
+    eggs and vanilla. Blend on high for one minute. Pour over the 
+    caramelized sugar. Place the filled casserole dish into a larger 
+    pan and add 1 inch of HOT water to the outer pan. 
+    
+    4. Bake in preheated oven for 50 to 60 minutes, or until set.`,
+    ratings: 0,
+    difficulty: 'Easy Peasy',
+    calories: 490
+},
+
+{
+    name: 'Chicken Cordon Bleu',
+
+    ingredients: [{
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // BREADCRUMBS
+        quantity: 1 / 2,
+        unit: 'cup'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // CHICKEN BREASTS
+        quantity: 2,
+        unit: 'small'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // CHESSE SWISS
+        quantity: 4,
+        unit: 'slices'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // HAM
+        quantity: 4,
+        unit: 'slices'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // EGG
+        quantity: 1,
+        unit: null
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // PLAIN FLOUR
+        quantity: 1,
+        unit: 'tsp'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // OLIVE OIL
+        quantity: null,
+        unit: null
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SALT
+        quantity: 1,
+        unit: 'pinch'
+    },
+    {
+        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // BLACK PEPPER
+        quantity: 1,
+        unit: 'pinch'
+    }
+    ],
+
+    picture: '/recipes/cordon-bleu.jpg',
+    time: '45min',
+    servings: 2,
+    directions: `1. Preheat oven to 180C/350F.
+    
+    2. Spread breadcrumbs on a baking tray and spray with oil. 
+    Bake for 3 minutes or until light golden. Remove and scrape 
+    into bowl straight away.
+   
+    3. Cut a pocket into each chicken breast.
+    Fold the cheese in half and place 2 pieces inside each pocket. 
+    Do the same with the ham. Close the pocket, seal with toothpicks.
+    Sprinkle with salt and pepper.
+   
+    4. Whisk egg and flour. Dip chicken into egg mixture, then into the 
+    breadcrumbs. Transfer to tray, spray with oil.
+    Bake for 25 to 30 minutes, or until golden brown and just cooked 
+    through. Rest for 5 minutes before serving with the Dijon Cream Sauce.`,
+    ratings: 0,
+    difficulty: 'Not so easy',
+    calories: 590
+}
 ];
 
 Recipe.create(recipes, (err, recipes) => {
