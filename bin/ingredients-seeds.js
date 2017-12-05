@@ -37,7 +37,7 @@ const ingredients = [
     basic: true
   },
   {
-    name: 'White sugar',
+    name: 'Sugar',
     basic: true
   },
   {
@@ -49,11 +49,27 @@ const ingredients = [
     basic: true
   },
   {
+    name: 'Cheese Swiss',
+    basic: false
+  },
+  {
+    name: 'Ham',
+    basic: false
+  },
+  {
     name: 'Sweetened Condensed Milk',
     basic: false
   },
   {
+    name: 'Breadcrumbs',
+    basic: false
+  },
+  {
     name: 'Heavy Cream',
+    basic: false
+  },
+  {
+    name: 'Chicken Breast',
     basic: false
   },
   {
@@ -117,19 +133,27 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Sugar',
-    basic: false
-  },
-  {
     name: 'Flour',
     basic: false
   }
 
 ];
 
+function deleteAllIngredients() {
+  return Ingredient.remove({})
+    .then(() => {
+      console.log('Deleted all ingredients');
+    })
+    .catch((err) => {
+      console.log('Failed to delete all ingredients');
+      return Promise.reject(err);
+    });
+}
+
+deleteAllIngredients();
+
 Ingredient.create(ingredients, (err, ingredients) => {
   if (err) { throw (err); }
   console.log('Success', ingredients);
   mongoose.connection.close();
-})
-  ;
+});

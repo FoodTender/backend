@@ -1,6 +1,9 @@
-const Recipe = require('../models/recipe');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/foodtender');
+
+const Recipe = require('../models/recipe');
+const Ingredient = require('../models/ingredient');
+
 
 const recipes = [
     // --- Basic Omelette --- //
@@ -8,17 +11,17 @@ const recipes = [
         name: 'Basic Omelette',
 
         ingredients: [{
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // EGGS
+            ingredient: "Egg", // Egg
             quantity: 3,
             unit: 'Beaten'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SUNFLOWER OIL
+            ingredient: 'Sunflower Oil', // SUNFLOWER OIL
             quantity: 1,
             unit: 'tsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // BUTTER
+            ingredient: "Butter",
             quantity: 1,
             unit: 'tsp'
         }
@@ -54,67 +57,67 @@ const recipes = [
         name: 'Classic spaghetti Bolognese',
 
         ingredients: [{
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // ONLIONS
+            ingredient: "Onion",
             quantity: 2,
             unit: 'Medium Size peeled and chopped'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // OLIVE OIL
+            ingredient: "Olive Oil",
             quantity: 1,
             unit: 'tbsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // GARLIC
+            ingredient: "Garlic",
             quantity: 1,
             unit: 'Clove, peeled and crushed'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // MINCED BEEF
+            ingredient: "Beef Minced",
             quantity: 500,
             unit: 'g'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // MUSHROOMS
+            ingredient: "Mushroom",
             quantity: 90,
             unit: 'g sliced'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // HERBS
+            ingredient: "Herbs",
             quantity: 1,
             unit: 'tbsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // TOMATOE
+            ingredient: "Tomato",
             quantity: 400,
             unit: 'g chopped'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // BEEF STOCK
+            ingredient: "Stock Beef",
             quantity: 300,
             unit: 'ml hot'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // TOMATO SAUCE
+            ingredient: "Tomato Sauce",
             quantity: 1,
             unit: 'tbsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SALT
+            ingredient: "Salt",
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // BLACK PEPPER
+            ingredient: "Black Pepper",
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SPAGHETTI
+            ingredient: "Spaghetti",
             quantity: 350,
             unit: 'g'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // PARMESAN CHEESE
+            ingredient: "Cheese Parmesan",
             quantity: null,
             unit: null
         }
@@ -160,38 +163,39 @@ const recipes = [
         difficulty: 'Not so easy',
         calories: 640
     },
+    ,
 
     // --- 3 minutes mug cacke --- //
     {
-        name: '3 minutes mug cacke',
+        name: '3 minutes mug cake',
 
         ingredients: [{
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // FLOUR
+            ingredient: "Flour",
             quantity: 4,
             unit: 'tbps'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SUGAR
+            ingredient: "Sugar",
             quantity: 4,
             unit: 'tbsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // COCOA
+            ingredient: "Cocoa",
             quantity: 2,
             unit: 'tbsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // EGG
+            ingredient: "Egg",
             quantity: 1,
             unit: 'big'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // MILK
+            ingredient: "Milk",
             quantity: 3,
             unit: 'tbsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // OLIVE OIL
+            ingredient: "Olive Oil",
             quantity: 3,
             unit: 'tbsp'
         }
@@ -201,18 +205,18 @@ const recipes = [
         time: '3 minutes',
         servings: 1,
         directions: `1. Pour all the ingredients in the mug and mix until it's homogeneous.
-
-        2. Add the egg and keep on mixing.
-
-        3. Pour the milk and the oil and keep shaking!
-
-        4. In case you have some chocolate or vanilla extract, use it now and mix a little bit more.
-
-        5. Put your mug in the microwave and cook for 3 minutes at 1000v (high). 
-
-        6. Add toppings of your choice (In case you have them).
-
-        6. Let it cool unless you want to burn your tongue!`,
+    
+            2. Add the egg and keep on mixing.
+    
+            3. Pour the milk and the oil and keep shaking!
+    
+            4. In case you have some chocolate or vanilla extract, use it now and mix a little bit more.
+    
+            5. Put your mug in the microwave and cook for 3 minutes at 1000v (high). 
+    
+            6. Add toppings of your choice (In case you have them).
+    
+            6. Let it cool unless you want to burn your tongue!`,
         ratings: 0,
         difficulty: 'Easy Peasy',
         calories: 347
@@ -224,27 +228,27 @@ const recipes = [
         name: 'Cuban Rice',
         ingredients: [
             {
-                ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // TOMATO SAUCE
+                ingredient: "Tomato Sauce",
                 quantity: 1,
                 unit: 'cup'
             },
             {
-                ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // OLIVE OIL
+                ingredient: "Olive Oil",
                 quantity: 3,
                 unit: 'tbsp'
             },
             {
-                ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // WATER
+                ingredient: "Water",
                 quantity: 3.5,
                 unit: 'cups'
             },
             {
-                ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SALT
+                ingredient: "Salt",
                 quantity: 1,
                 unit: 'pinch'
             },
             {
-                ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // EGGS
+                ingredient: "Egg",
                 quantity: 4,
                 unit: 'Large ones'
             }
@@ -254,30 +258,30 @@ const recipes = [
         time: '40 minutes',
         servings: 4,
         directions: `1. Make the sofrito. 
+        
+            2. While the sofrito is simmering, make the rice. 
     
-        2. While the sofrito is simmering, make the rice. 
-
-        3. Pour approximately 2 to 3 tablespoons of olive oil into a medium-size saucepan and place over 
-        medium-high heat. 
-        
-        4. Add the rice into the pan and coat the rice with the oil. 
-        
-        5. Pour enough water to cover the rice into the pan and bring to a boil. 
-        
-        6. Add salt to taste. Then, reduce the heat, loosely cover and allow to simmer until rice is cooked, 
-        about 20 minutes.
-
-        7. Pour 1/4-inch olive oil into a small frying pan and place over medium heat. 
-        
-        8. Fry the eggs one at a time in the olive oil, sprinkling with a dash of salt.
-        
-        9. Place a scoop of rice on each plate and make a depression in the center. 
-        
-        10. Ladle some of the sofrito into the depression. 
-        
-        11. Carefully top with a fried egg. 
-        
-        12. Serve immediately with a baguette.`,
+            3. Pour approximately 2 to 3 tablespoons of olive oil into a medium-size saucepan and place over 
+            medium-high heat. 
+            
+            4. Add the rice into the pan and coat the rice with the oil. 
+            
+            5. Pour enough water to cover the rice into the pan and bring to a boil. 
+            
+            6. Add salt to taste. Then, reduce the heat, loosely cover and allow to simmer until rice is cooked, 
+            about 20 minutes.
+    
+            7. Pour 1/4-inch olive oil into a small frying pan and place over medium heat. 
+            
+            8. Fry the eggs one at a time in the olive oil, sprinkling with a dash of salt.
+            
+            9. Place a scoop of rice on each plate and make a depression in the center. 
+            
+            10. Ladle some of the sofrito into the depression. 
+            
+            11. Carefully top with a fried egg. 
+            
+            12. Serve immediately with a baguette.`,
         ratings: 0,
         difficulty: 'Not so easy',
         calories: 264
@@ -289,32 +293,32 @@ const recipes = [
         name: 'Spanish Flan',
 
         ingredients: [{
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // WHITE SUGAR
+            ingredient: "Sugar",
             quantity: 2 / 3,
             unit: 'cup'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // EGGS
+            ingredient: "Egg",
             quantity: 5,
             unit: 'room-temperature'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SWEETENED CONDENSED MILK
+            ingredient: "Sweetened Condensed Milk",
             quantity: 1,
             unit: 'can'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // HEAVY CREAM
+            ingredient: "Heavy Cream",
             quantity: 2,
             unit: 'cups'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // MILK
+            ingredient: "Milk",
             quantity: 1,
             unit: 'cup'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // VANILLA EXTRACT
+            ingredient: "Vanilla Extract",
             quantity: 2,
             unit: 'tsp'
         }
@@ -324,22 +328,22 @@ const recipes = [
         time: '1h 20m',
         servings: 8,
         directions: `1. Preheat oven to 350 degrees F (175 degrees C).
-
-        2. In a small nonstick saucepan, heat the sugar over medium heat. 
-        Shake and swirl occasionally to distribute sugar until it is 
-        dissolved and begins to brown. Lift the pan over the heat source 
-        (4 to 6 inches) and continue to brown the sugar until it becomes 
-        a dark golden brown. You may slightly stir while cooking, but 
-        continually stirring causes the sugar to crystallize. Pour 
-        caramelized sugar into a 1 1/2 quart casserole dish or a large 
-        loaf pan, and swirl to coat the bottom of the pan evenly.
-        
-        3. In a blender, combine sweetened condensed milk, cream, milk, 
-        eggs and vanilla. Blend on high for one minute. Pour over the 
-        caramelized sugar. Place the filled casserole dish into a larger 
-        pan and add 1 inch of HOT water to the outer pan. 
-        
-        4. Bake in preheated oven for 50 to 60 minutes, or until set.`,
+    
+            2. In a small nonstick saucepan, heat the sugar over medium heat. 
+            Shake and swirl occasionally to distribute sugar until it is 
+            dissolved and begins to brown. Lift the pan over the heat source 
+            (4 to 6 inches) and continue to brown the sugar until it becomes 
+            a dark golden brown. You may slightly stir while cooking, but 
+            continually stirring causes the sugar to crystallize. Pour 
+            caramelized sugar into a 1 1/2 quart casserole dish or a large 
+            loaf pan, and swirl to coat the bottom of the pan evenly.
+            
+            3. In a blender, combine sweetened condensed milk, cream, milk, 
+            eggs and vanilla. Blend on high for one minute. Pour over the 
+            caramelized sugar. Place the filled casserole dish into a larger 
+            pan and add 1 inch of HOT water to the outer pan. 
+            
+            4. Bake in preheated oven for 50 to 60 minutes, or until set.`,
         ratings: 0,
         difficulty: 'Easy Peasy',
         calories: 490
@@ -350,47 +354,47 @@ const recipes = [
         name: 'Chicken Cordon Bleu',
 
         ingredients: [{
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // BREADCRUMBS
+            ingredient: "Breadcrumbs",
             quantity: 1 / 2,
             unit: 'cup'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // CHICKEN BREASTS
+            ingredient: "Chicken Breast",
             quantity: 2,
             unit: 'small'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // CHESSE SWISS
+            ingredient: "Cheese Swiss",
             quantity: 4,
             unit: 'slices'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // HAM
+            ingredient: "Ham",
             quantity: 4,
             unit: 'slices'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // EGG
+            ingredient: "Egg",
             quantity: 1,
             unit: null
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // PLAIN FLOUR
+            ingredient: "Flour",
             quantity: 1,
             unit: 'tsp'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // OLIVE OIL
+            ingredient: "Olive Oil",
             quantity: null,
             unit: null
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // SALT
+            ingredient: "Salt",
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: { type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }, // BLACK PEPPER
+            ingredient: "Black Pepper",
             quantity: 1,
             unit: 'pinch'
         }
@@ -400,29 +404,80 @@ const recipes = [
         time: '45min',
         servings: 2,
         directions: `1. Preheat oven to 180C/350F.
-    
-        2. Spread breadcrumbs on a baking tray and spray with oil. 
-        Bake for 3 minutes or until light golden. Remove and scrape 
-        into bowl straight away.
-    
-        3. Cut a pocket into each chicken breast.
-        Fold the cheese in half and place 2 pieces inside each pocket. 
-        Do the same with the ham. Close the pocket, seal with toothpicks.
-        Sprinkle with salt and pepper.
-    
-        4. Whisk egg and flour. Dip chicken into egg mixture, then into the 
-        breadcrumbs. Transfer to tray, spray with oil.
-        Bake for 25 to 30 minutes, or until golden brown and just cooked 
-        through. Rest for 5 minutes before serving with the Dijon Cream Sauce.`,
+        
+            2. Spread breadcrumbs on a baking tray and spray with oil. 
+            Bake for 3 minutes or until light golden. Remove and scrape 
+            into bowl straight away.
+        
+            3. Cut a pocket into each chicken breast.
+            Fold the cheese in half and place 2 pieces inside each pocket. 
+            Do the same with the ham. Close the pocket, seal with toothpicks.
+            Sprinkle with salt and pepper.
+        
+            4. Whisk egg and flour. Dip chicken into egg mixture, then into the 
+            breadcrumbs. Transfer to tray, spray with oil.
+            Bake for 25 to 30 minutes, or until golden brown and just cooked 
+            through. Rest for 5 minutes before serving with the Dijon Cream Sauce.`,
         ratings: 0,
         difficulty: 'Not so easy',
         calories: 590
     }
 ];
 
-Recipe.create(recipes, (err, recipes) => {
-    if (err) { throw (err); }
-    console.log('Success', recipes);
-    mongoose.connection.close();
-})
-    ;
+function populateRecipeIngredient(recipe, index) {
+    const name = recipe.ingredients[index].ingredient;
+    return Ingredient.findOne({ name: name })
+        .then(ingredient => {
+            if (!ingredient) {
+                return Promise.reject("Ingredient " + name + " does not exist in recipe " + recipe.name);
+            }
+            recipe.ingredients[index].ingredient = ingredient._id;
+        });
+}
+
+function populateRecipeIngredients(recipe) {
+    const promises = recipe.ingredients.map((ingredient, index) => {
+        return populateRecipeIngredient(recipe, index);
+    });
+    return Promise.all(promises);
+}
+
+function deleteAllRecipes() {
+    return Recipe.remove({})
+        .then(() => {
+            console.log('Deleted all recipes');
+        })
+        .catch((err) => {
+            console.log('Failed to delete all recipes');
+            return Promise.reject(err);
+        });
+}
+
+function createRecipes() {
+    const promises = recipes.map(recipe => {
+        return populateRecipeIngredients(recipe)
+            .then(() => {
+                console.log("Going to create " + recipe.name);
+                return Recipe.create(recipe);
+            }).then(() => {
+                console.log('Success: ' + recipe.name);
+            });
+    });
+
+    return Promise.all(promises);
+}
+
+
+deleteAllRecipes()
+    .then(() => createRecipes())
+    .then(() => {
+        mongoose.connection.close();
+        process.exit();
+    })
+    .catch((err) => {
+        console.log('the whole thing failed, the error was', err);
+        mongoose.connection.close();
+        process.exit();
+    });
+
+
