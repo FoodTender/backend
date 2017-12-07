@@ -6,6 +6,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 // ROUTES REQUIRED
 const index = require('./routes/index');
@@ -13,10 +16,11 @@ const ingredients = require('./routes/ingredients');
 
 // EXPRESS
 const app = express();
+dotenv.config();
 
 // MONGOOSE CONFIG
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/foodtender', {
+mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE,
   useMongoClient: true
@@ -27,7 +31,24 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  credentials: true,
+  origin: [process.env.CLIENT_URL]
+}));
+
+// SESSION
+app.use(session({
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+    ttl: 24 * 60 * 60 // 1 day
+  }),
+  secret: 'ask-irene',
+  resave: true,
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 24 * 60 * 60 * 10000
+  }
+}));
 
 app.use('/', index);
 app.use('/ingredients', ingredients);
