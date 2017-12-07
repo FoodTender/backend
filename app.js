@@ -9,9 +9,13 @@ const dotenv = require('dotenv');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
+const response = require('./helpers/response');
+const configurePassport = require('./helpers/passport');
+
 // ROUTES REQUIRED
 const index = require('./routes/index');
 const ingredients = require('./routes/ingredients');
+const auth = require('./routes/auth');
 
 // EXPRESS
 const app = express();
@@ -41,7 +45,7 @@ app.use(session({
     mongooseConnection: mongoose.connection,
     ttl: 24 * 60 * 60 // 1 day
   }),
-  secret: 'ask-irene',
+  secret: 'garfield',
   resave: true,
   saveUninitialized: true,
   cookie: {
@@ -49,13 +53,21 @@ app.use(session({
   }
 }));
 
+const passport = configurePassport();
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(cookieParser());
+
 app.use('/', index);
+app.use('/auth', auth);
 app.use('/ingredients', ingredients);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-  res.status(404);
-  res.json({ error: 'Page not Found' });
+response.notFound(req, res);
 });
 
 // NOTE: requires a views/error.ejs template
@@ -65,8 +77,7 @@ app.use((err, req, res, next) => {
 
   // only render if the error ocurred before sending the response
   if (!res.headersSent) {
-    res.status(500);
-    res.json({ error: 'Unexpected error' });
+response.unexpectedError(req, res, err);
   }
 });
 
