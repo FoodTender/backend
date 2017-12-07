@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 
 // ROUTES REQUIRED
 const index = require('./routes/index');
+const ingredients = require('./routes/ingredients');
 
 // EXPRESS
 const app = express();
@@ -26,12 +27,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 
 app.use('/', index);
+app.use('/ingredients', ingredients);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next, err) {
-  res.json({ error: 'Not found' });
+  // res.json({ error: 'Not found' });
   err.status(404);
 });
 
