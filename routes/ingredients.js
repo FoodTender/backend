@@ -24,25 +24,25 @@ router.get('/ingredients', (req, res, next) => {
 
 // --- Get recipes by selected ingredients --- //
 router.get('/recipes', (req, res, next) => {
-    const ingredients = req.query.ingredients;
+    const ingredients = req.query.ingredients || '';
     console.log('Ingredients: ' + ingredients);
-    if (ingredients.length > 0) {
-        Recipe.find().populate('ingredients.ingredient')
-        .exec((err, recipe) => {
-            if (err) {
-                return next(err);
-            }
-            recipe.forEach(ingredients => {
-                // console.log('Recipe ' + recipe.name + ': ' + ingredient.name);
-                console.log(JSON.stringify(ingredients));
-                for (var i in ingredients) {
-                    console.log(i);
-                }
-            });
-            // console.log('Recipe: ' + recipe);
+
+    Ingredient.getIdsFromNames(ingredients.split(','))
+        .then((ingredientIds) => {
+            res.json(ingredientIds);
+            return;
+
+            const filter = {};
+
+            Recipe.find(filter).populate('ingredients.ingredient')
+                .exec((err, recipes) => {
+                    if (err) {
+                        return next(err);
+                    }
+
+                    res.json(recipes);
+                });
         });
-    }
-    // let findQuery = {};
 });
 
 module.exports = router;
