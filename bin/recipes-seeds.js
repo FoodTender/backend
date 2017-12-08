@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/foodtender');
+//mongoose.connect(process.env.mLabDB);
 
 const Recipe = require('../models/recipe');
 const Ingredient = require('../models/ingredient');
