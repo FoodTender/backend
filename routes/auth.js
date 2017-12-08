@@ -28,7 +28,7 @@ router.post('/login', (req, res, next) => {
 
 router.post('/signup', (req, res, next) => {
   if (req.user) {
-    return response.forbidden();
+    return response.forbidden(req, res, 'Already logged in');
   }
   const {
     username,
@@ -45,7 +45,6 @@ router.post('/signup', (req, res, next) => {
   if (!email) {
     return response.unprocessable(req, res, 'Missing mandatory field "Email".');
   }
-
   User.findOne({
     email
   }, 'email', (err, userExists) => {
