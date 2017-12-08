@@ -29,19 +29,22 @@ router.get('/recipes', (req, res, next) => {
 
     Ingredient.getIdsFromNames(ingredients.split(','))
         .then((ingredientIds) => {
-            res.json(ingredientIds);
-            return;
-
-            const filter = {};
-
-            Recipe.find(filter).populate('ingredients.ingredient')
-                .exec((err, recipes) => {
-                    if (err) {
-                        return next(err);
-                    }
-
-                    res.json(recipes);
-                });
+            console.log(ingredientIds);
+            Recipe.find({ 'ingredients.ingredient': { $all: ingredientIds } }, (err, ingredient) => {
+                if (err) {
+                    throw next(err);
+                }
+                console.log(ingredient);
+                res.json(ingredient);
+            });
+            // const filter = {};
+            // Recipe.find(filter).populate('ingredients.ingredient')
+            //     .exec((err, recipes) => {
+            //         if (err) {
+            //             return next(err);
+            //         }
+            //         res.json(recipes);
+            //     });
         });
 });
 
