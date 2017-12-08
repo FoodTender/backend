@@ -22,19 +22,18 @@ router.get('/ingredients', (req, res, next) => {
 });
 
 // --- Get recipes by selected ingredients --- //
-// router.get('/recipes', (req, res, next) => {
-//     const ingredients = req.query.ingredients;
+router.get('/recipes', (req, res, next) => {
+    const ingredients = req.query.ingredients;
+    console.log('Ingredients: ' + ingredients);
+    // let findQuery = {};
 
-//     console.log('ingredients: ' + JSON.stringify(ingredient));
-//     // let findQuery = {};
-
-//     // findQuery = { name: search };
-//     // Ingredient.find(findQuery, (err, ingredient) => {
-//     //     if (err) {
-//     //         return next(err);
-//     //     }
-//     //     res.json(ingredient);
-//     // });
-// });
+    // findQuery = { name: search };
+    // Ingredient.find(findQuery, (err, ingredient) => {
+    //     if (err) {
+    //         return next(err);
+    //     }
+    //     res.json(ingredient);
+    // });
+});
 
 module.exports = router;
