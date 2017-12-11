@@ -15,6 +15,8 @@ const configurePassport = require('./helpers/passport');
 // ROUTES REQUIRED
 const index = require('./routes/index');
 const ingredients = require('./routes/ingredients');
+const recipes = require('./routes/recipes');
+
 const auth = require('./routes/auth');
 
 // EXPRESS
@@ -64,6 +66,7 @@ app.use(cookieParser());
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/', ingredients);
+app.use('/recipes', recipes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
