@@ -66,6 +66,7 @@ app.use('/', index);
 app.use('/auth', auth);
 app.use('/', ingredients);
 app.use('/', recipes);
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
 response.notFound(req, res);
