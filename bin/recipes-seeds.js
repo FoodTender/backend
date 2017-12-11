@@ -10,12 +10,12 @@ const recipes = [
     {
         name: 'Basic Omelette',
         ingredients: [{
-            ingredient: 'Egg', // Egg
+            ingredient: 'Egg',
             quantity: 3,
             unit: 'Beaten'
         },
         {
-            ingredient: 'Sunflower Oil', // SUNFLOWER OIL
+            ingredient: 'Sunflower Oil',
             quantity: 1,
             unit: 'tsp'
         },
@@ -56,7 +56,7 @@ const recipes = [
         name: 'Classic spaghetti Bolognese',
 
         ingredients: [{
-            ingredient: 'Onion',
+            ingredient: 'Vegetable Onion',
             quantity: 2,
             unit: 'Medium Size peeled and chopped'
         },
@@ -96,7 +96,7 @@ const recipes = [
             unit: 'ml hot'
         },
         {
-            ingredient: 'Tomato Sauce',
+            ingredient: 'Sauce Tomato',
             quantity: 1,
             unit: 'tbsp'
         },
@@ -106,12 +106,12 @@ const recipes = [
             unit: 'pinch'
         },
         {
-            ingredient: 'Black Pepper',
+            ingredient: 'Pepper Black',
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: 'Spaghetti',
+            ingredient: 'Pasta Spaghetti',
             quantity: 350,
             unit: 'g'
         },
@@ -163,7 +163,7 @@ const recipes = [
         calories: 640
     },
 
-    // --- 3 minutes mug cacke --- //
+    // --- 3 minutes mug cake --- //
     {
         name: '3 minutes mug cake',
 
@@ -226,7 +226,7 @@ const recipes = [
         name: 'Cuban Rice',
         ingredients: [
             {
-                ingredient: 'Tomato Sauce',
+                ingredient: 'Sauce Tomato',
                 quantity: 1,
                 unit: 'cup'
             },
@@ -346,8 +346,7 @@ const recipes = [
         difficulty: 'Easy Peasy',
         calories: 490
     },
-
-    // --- Chicken Cordon Bleu --- //
+// --- Chicken Cordon Bleu --- //
     {
         name: 'Chicken Cordon Bleu',
 
@@ -392,7 +391,7 @@ const recipes = [
             unit: 'pinch'
         },
         {
-            ingredient: 'Black Pepper',
+            ingredient: 'Pepper Black',
             quantity: 1,
             unit: 'pinch'
         }
@@ -419,7 +418,260 @@ const recipes = [
         ratings: 0,
         difficulty: 'Not so easy',
         calories: 590
+    },
+        // --- Bacon Wrapped Eggs --- //
+    {
+        name: 'Bacon Wrapped Eggs',
+        ingredients: [{
+            ingredient: 'Bacon',
+            quantity: 12,
+            unit: 'Slices'
+        },
+        {
+            ingredient: 'Egg',
+            quantity: 12,
+            unit: 'Fresh'
+        },
+        {
+            ingredient: 'Salt',
+            quantity: 0.5,
+            unit: 'Teaspoon'
+        },
+        {
+            ingredient: 'Pepper Black',
+            quantity: 0.5,
+            unit: 'Teaspoon'
+        }
+    ],
+
+        picture: '/recipes/wrapped-eggs.jpg',
+        time: '20 min',
+        servings: 6,
+        directions: `1 Preheat oven 375 degrees. 
+        2 In medium frying pan fry bacon to soft transparent stage. 
+        3 Drain on paper towels. 
+        4 Line each slice around the side of each muffin cup. Ends may overlap. 
+        5 Break egg directly in the center of each muffin cup. 12 cup muffin pan. 
+        6 Slightly salt and pepper. 
+        7 Cook 15 to 20 minutes. 
+        8 Watch for whites and yolks to begin to set. 
+        9 Take out with small spatula on a serving plate. 
+        10 Serve with fork and knife. 
+        11 If you want the tops to be basted,after ten minutes of cooking, baste each egg once with 1/2 teaspoon of water. 
+        12 You can fry bacon the night before and drain and refrigerate for morning.`,
+        ratings: 0,
+        difficulty: 'Easy Peasy',
+        calories: 216
+    },
+    // --- Bacon Sheets --- //
+    {
+        name: 'Bacon Sheets',
+        ingredients: [{
+            ingredient: 'Bacon',
+            quantity: 6,
+            unit: 'Slices'
+        }],
+
+        picture: '/recipes/bacon-sheets.jpg',
+        time: '10 mins',
+        servings: 1,
+        directions: `1. Line a baking sheet with Foil or Parchment Paper
+        2. Cut Bacon slices in half
+        3. Weave the bacon like a basket, cut the bacon lengthwise if you want a tighter weave.
+        4. Place a cooling rack on top to make sure the bacon stays FLAT
+        5. Do not pan fry your sheet of bacon. Bake it in the oven for 15-20 minutes at about 350 - 400 degrees 
+        (depending on how crispy you like it). This will keep it from curling and becoming a waste of your time.
+        6. The cool thing about weaves is that you cook it and cut it to the shape you would like. 
+        7. Squares, triangles, trucker mud flap ladies or just cut it to fit your sandwich/burger.`,
+        ratings: 0,
+        difficulty: 'Easy Peasy',
+        calories: 153
+    },
+      // --- Loaded Potato Bites --- //
+    {
+        name: 'Loaded Potato Bites',
+        ingredients: [{
+            ingredient: 'Potato',
+            quantity: 24,
+            unit: 'Oz refrigerated and mashed'
+        },
+        {
+            ingredient: 'Cheese',
+            quantity: 2,
+            unit: 'Cup Shredded'
+        },
+        {
+            ingredient: 'Bacon',
+            quantity: 3,
+            unit: 'Slices cooked and crumbled'
+        },
+        {
+            ingredient: 'Egg',
+            quantity: 6,
+            unit: 'Units'
+        },
+        {
+            ingredient: 'Breadcrumbs',
+            quantity: 1.75,
+            unit: 'Cups'
+        },
+        {
+            ingredient: 'Sunflower Oil',
+            quantity: 1,
+            unit: 'Frying pan'
+        }],
+
+        picture: '/recipes/loaded-potato-bites.jpg',
+        time: '15 mins',
+        servings: 4,
+        directions: `1. In large bowl, mix mashed potatoes, cheese, 2 tablespoons of the chives, 
+        the bacon and 1 of the eggs with spoon until blended. 
+        2. Shape mixture into 1-inch balls 
+        3. In shallow bowl, place bread crumbs. 
+        4. In another shallow bowl, beat remaining 5 eggs.
+        5. Coat potato balls with bread crumbs, then dip into eggs and coat again with bread crumbs.
+        6. In deep fryer or 3-quart heavy saucepan, heat 2 inches oil to 375°F. 
+        7. Fry potato balls, in batches, in hot oil 1 minute to 1 minute 30 seconds or until golden brown. 
+        8. Drain on paper towels.
+        9. In small bowl, mix sour cream, remaining 2 tablespoons chives and the dressing mix. 
+        10. Serve warm potato bites with sauce.`,
+        ratings: 0,
+        difficulty: 'Not so easy',
+        calories: 264
+    },
+    // --- Bacon wrapped mini omalettes --- //
+    {
+        name: 'Bacon Wrapped Mini Omalettes',
+        ingredients: [{
+            ingredient: 'Bacon',
+            quantity: 12,
+            unit: 'Slices'
+        },
+        {
+            ingredient: 'Egg',
+            quantity: 8,
+            unit: 'Large'
+        },
+        {
+            ingredient: 'Milk',
+            quantity: 0.25,
+            unit: 'Cup'
+        },
+        {
+            ingredient: 'Cheese',
+            quantity: 3,
+            unit: 'Tbsp shredded'
+        }],
+
+        picture: '/recipes/bacon-wrapped-mini-omalette.jpg',
+        time: '40 mins',
+        servings: 1,
+        directions: `1. Put bacon strips in muffin tin and then add whipped eggs with a little cheese about 3/4 full.
+        2. Bake at 350 degrees for 30-35 min.`,
+        ratings: 0,
+        difficulty: 'Eaesy Peasy',
+        calories: 216
+    },
+    // --- Roasted Bacon Cheesy Potatoes --- //
+    {
+        name: 'Roasted Bacon Cheesy Potatoes',
+        ingredients: [{
+            ingredient: 'Bacon',
+            quantity: 0.5,
+            unit: 'Pound'
+        },
+        {
+            ingredient: 'Potato',
+            quantity: 6,
+            unit: 'white ones'
+        },
+        {
+            ingredient: 'Salt',
+            quantity: 1,
+            unit: 'According to taste'
+        },
+        {
+            ingredient: 'Pepper Black',
+            quantity: 1,
+            unit: 'According to taste'
+        }],
+
+        picture: '/recipes/roasted-bacon-cheesy-potatoes.jpg',
+        time: '70 mins',
+        servings: 6,
+        directions: `1. Preheat your oven to 425ºF with a rack in the middle position.
+        2. Cut the bacon into half inch pieces and fry until crisp. Set the pieces aside on paper towels to drain, 
+        do not discard the fat.
+        3. Pour 1 to 2 tablespoons of the bacon fat onto a rimmed baking sheet. You want enough to coat the bottom 
+        of the sheet, but not so much that it pools.
+        4. Cut the potatoes up into roughly 1/2" cubes. Put on the baking sheet and toss with a spatula to coat with 
+        the bacon fat.
+        5. Roast the potatoes for 20 minutes, then toss with a spatula, roast for an additional 20 minutes. At this point 
+        check them. I usually toss them one more time, then let them go for another 15 minutes, but it all depends on 
+        how big the pieces are. They are done when all the sides are browned and crisp looking, but none should look 
+        burnt.
+        6. Remove the pan from the oven, season with salt and pepper, and top with your shredded cheese and bacon. Set the 
+        oven to broil, and place the pan back in just long enough for the cheese to melt and bubble.`,
+        ratings: 0,
+        difficulty: 'Not so easy',
+        calories: 465
+    },
+    // --- Bacon Potato --- //
+    {
+        name: 'Bacon Potato',
+        ingredients: [{
+            ingredient: 'Potato',
+            quantity: 1,
+            unit: 'White'
+        },
+        {
+            ingredient: 'Bacon',
+            quantity: 20,
+            unit: 'Slices'
+        }],
+
+        picture: '/recipes/bacon-potatoes.jpg',
+        time: '45 mins',
+        servings: 1,
+        directions: `
+        1. Peel and slice the Potato ALMOST all the way through.
+        2. Then insert Bacon slices
+        3. Bake in the oven with a little oil for 45 minutes at 400 degrees
+        (depending on the size of the potato)
+        
+        You can cook the Potato halfway before adding the bacon if you like.
+        The "Better but takes a lot longer" Procedure:
+        
+        1. Freeze your Bacon on a Baking sheet for about 30 minutes
+        2. Cut the Potatoes stopping about 1/4 inch from the bottom
+        3. Boil them for about 4 minutes
+        4. Remove and pat dry
+        5. Insert frozen Bacon pieces into the cuts on the potato
+        6. Melt some butter over the top and season (salt and pepper)
+        7. Then you can bake them at 350 for 2 hours if you have the time (425 for an hour if you have less time)
+        8. Baste with melted butter halfway through.
+        9. You can throw some Cheese on top when there's 6 minutes left (optional)
+        10. Top with Onions, Parsley, etc...`,
+        ratings: 0,
+        difficulty: 'Easy Peasy',
+        calories: 284
     }
+// {
+//         name: 'EXAMPLE',
+//         ingredients: [{
+//             ingredient: 'NAME',
+//             quantity: 0,
+//             unit: 'KIND'
+//         }],
+
+//         picture: '/recipes/recipe.jpg',
+//         time: 'timestring',
+//         servings: 0,
+//         directions: `multilinestring`,
+//         ratings: 0,
+//         difficulty: 'level',
+//         calories: 0
+//     }
 ];
 
 function populateRecipeIngredient (recipe, index) {
