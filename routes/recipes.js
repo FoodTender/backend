@@ -4,7 +4,8 @@ const Ingredient = require('../models/ingredient');
 const Recipe = require('../models/recipe');
 
 // --- Get recipes by selected ingredients --- //
-router.get('/', (req, res, next) => {
+router.get('/recipes', (req, res, next) => {
+    console.log('recipes route');
     const ingredients = req.query.ingredients || '';
     console.log('Ingredients: ' + ingredients);
 
@@ -15,7 +16,6 @@ router.get('/', (req, res, next) => {
                 if (err) {
                     throw next(err);
                 }
-                console.log(ingredient);
                 res.json(ingredient);
             });
             // const filter = {};
