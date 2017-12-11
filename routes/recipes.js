@@ -5,27 +5,28 @@ const Recipe = require('../models/recipe');
 
 // --- Get recipes by selected ingredients --- //
 router.get('/recipes', (req, res, next) => {
-    console.log('recipes route');
-    const ingredients = req.query.ingredients || '';
-    console.log('Ingredients: ' + ingredients);
+    let ingredients = req.query.ingredients || '';
+    let resultantRecipes = [];
+
+    ingredients = ingredients.replace(/_/g, ' ');
 
     Ingredient.getIdsFromNames(ingredients.split(','))
         .then((ingredientIds) => {
-            console.log(ingredientIds);
-            Recipe.find({ 'ingredients.ingredient': { $all: ingredientIds } }, (err, ingredient) => {
+            console.log('ingredientsIds: ' + ingredientIds.length);
+            // db.recipes.find({ingredients: {$all: ['Potato', 'Egg', 'Cheese', 'Bacon', 'Breadcrumbs']}, ingredients: {$size: 5}})
+            Recipe.find({ 'ingredients.ingredient': ingredientIds }, (err, recipe) => {
                 if (err) {
                     throw next(err);
                 }
-                res.json(ingredient);
+                recipe.forEach(doc => {
+                    console.log(doc.ingredients.length);
+                    if (doc.ingredients.length <= ingredientIds.length) {
+                        resultantRecipes.push(doc);
+                        console.log('doc: ', typeof (doc));
+                    }
+                });
+                res.json(resultantRecipes);
             });
-            // const filter = {};
-            // Recipe.find(filter).populate('ingredients.ingredient')
-            //     .exec((err, recipes) => {
-            //         if (err) {
-            //             return next(err);
-            //         }
-            //         res.json(recipes);
-            //     });
         });
 });
 
