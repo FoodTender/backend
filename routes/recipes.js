@@ -5,16 +5,15 @@ const Recipe = require('../models/recipe');
 
 // --- Get clicked recipe --- //
 router.get('/recipes/:id', (req, res, next) => {
-    console.log('recipes-');
-    // let recipeId = req.params.id;
-    // console.log('recipeId: ' + recipeId);
+    let recipeId = req.params.id;
 
-    // Recipe.findById(recipeId, (err, recipe) => {
-    //     if (err) {
-    //         throw next(err);
-    //     }
-    //     console.log(recipe);
-    // });
+    Recipe.findById(recipeId, (err, recipe) => {
+        if (err) {
+            throw next(err);
+        }
+        console.log(req.user);
+        res.json(recipe);
+    });
 });
 
 // --- Get recipes by selected ingredients --- //
