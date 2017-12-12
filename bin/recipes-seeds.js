@@ -568,7 +568,7 @@ const recipes = [
         directions: `1. Put bacon strips in muffin tin and then add whipped eggs with a little cheese about 3/4 full
         2. Bake at 350 degrees for 30 - 35 min.`,
         ratings: 0,
-        difficulty: 'Eaesy Peasy',
+        difficulty: 'Easy Peasy',
         calories: 216
     },
     // --- Roasted Bacon Cheesy Potatoes --- //
