@@ -69,7 +69,7 @@ app.use('/', recipes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-response.notFound(req, res);
+  response.notFound(req, res);
 });
 
 // NOTE: requires a views/error.ejs template
@@ -79,7 +79,7 @@ app.use((err, req, res, next) => {
 
   // only render if the error ocurred before sending the response
   if (!res.headersSent) {
-response.unexpectedError(req, res, err);
+    response.unexpectedError(req, res, err);
   }
 });
 

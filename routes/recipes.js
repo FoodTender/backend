@@ -6,18 +6,21 @@ const Recipe = require('../models/recipe');
 // --- Get clicked recipe --- //
 router.get('/recipes/:id', (req, res, next) => {
     let recipeId = req.params.id;
+    console.log('USER');
+    console.log(req.user);
 
     Recipe.findById(recipeId, (err, recipe) => {
         if (err) {
             throw next(err);
         }
-        console.log(req.user);
         res.json(recipe);
     });
 });
 
 // --- Get recipes by selected ingredients --- //
 router.get('/recipes', (req, res, next) => {
+    console.log('USER');
+    console.log(req.user);
     let ingredients = req.query.ingredients || '';
     let resultantRecipes = [];
 
