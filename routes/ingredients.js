@@ -23,7 +23,7 @@ router.get('/ingredients', (req, res, next) => {
 });
 
 router.get('/ingredients/basic', (req, res, next) => {
-    Ingredient.find({basic: true}, (err, ingredient) => {
+    Ingredient.find({}, (err, ingredient) => {
         if (err) {
             return next(err);
         }
