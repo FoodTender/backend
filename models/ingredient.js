@@ -9,7 +9,6 @@ const ingredientSchema = new Schema({
   });
 
 ingredientSchema.statics.getIdFromName = function (name) {
-  console.log('name: ' + name);
   return this.findOne({ name: new RegExp('^' + name + '$', 'i') })
     .then(ingredient => {
       if (!ingredient) {
@@ -20,7 +19,6 @@ ingredientSchema.statics.getIdFromName = function (name) {
 };
 
 ingredientSchema.statics.getIdsFromNames = function (names) {
-  console.log('names: ' + names);
   const promises = names.map((name) => {
     return this.getIdFromName(name);
   });
