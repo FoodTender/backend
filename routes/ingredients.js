@@ -22,6 +22,15 @@ router.get('/ingredients', (req, res, next) => {
     }
 });
 
+router.get('/ingredients/basic', (req, res, next) => {
+    Ingredient.find({basic: true}, (err, ingredient) => {
+        if (err) {
+            return next(err);
+        }
+        res.json(ingredient);
+    });
+});
+
 // router.get('/ingredients/basics', (req, res, next) => { // For autocompleting chips
 //     Ingredient.find({basic: true}, (err, ingredient) => {
 //         if (err) {
