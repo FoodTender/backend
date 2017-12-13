@@ -22,7 +22,7 @@ const ingredients = [
     basic: true
   },
   {
-    name: 'Pepper Black',
+    name: 'Black Pepper',
     basic: true
   },
   {
@@ -46,7 +46,7 @@ const ingredients = [
     basic: true
   },
   {
-    name: 'Cheese Swiss',
+    name: 'Swiss Cheese',
     basic: false
   },
   {
@@ -78,7 +78,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Vegetable Onion',
+    name: 'Onion (Vegetable)',
     basic: false
   },
   {
@@ -86,7 +86,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Beef Minced',
+    name: 'Minced Beef',
     basic: false
   },
   {
@@ -102,11 +102,11 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Tomato Chopped',
+    name: 'Chopped Tomato',
     basic: false
   },
   {
-    name: 'Stock Beef',
+    name: 'Beef Stock',
     basic: false
   },
   {
@@ -114,15 +114,15 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Sauce Tomato',
+    name: 'Tomato Sauce',
     basic: false
   },
   {
-    name: 'Pasta Spaghetti',
+    name: 'Spaghetti (Pasta)',
     basic: false
   },
   {
-    name: 'Cheese Parmesan',
+    name: 'Parmesan Cheese',
     basic: false
   },
   {
@@ -138,7 +138,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Fruit Apple',
+    name: 'Apple (Fruit)',
     basic: false
   },
   {
@@ -150,11 +150,11 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Sugar Brown',
+    name: 'Brown Sugar',
     basic: false
   },
   {
-    name: 'Vegetable Cauliflower',
+    name: 'Cauliflower (Vegetable)',
     basic: false
   },
   {
@@ -162,11 +162,11 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Stock Chicken',
+    name: 'Chicken Stock',
     basic: false
   },
   {
-    name: 'Cream of Veggies',
+    name: 'Veggies Cream',
     basic: false
   },
   {
@@ -174,7 +174,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Onion green',
+    name: 'Green Onion (Vegetable)',
     basic: false
   },
   {
@@ -182,11 +182,11 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Mayonnaise',
+    name: 'Mayonnaise (Sauce)',
     basic: false
   },
   {
-    name: 'Mustard',
+    name: 'Mustard (Sauce)',
     basic: false
   },
   {
@@ -194,7 +194,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Butter Peanut',
+    name: 'Peanut Butter',
     basic: false
   },
   {
@@ -206,23 +206,23 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Fruit Avocado',
+    name: 'Avocado (Fruit)',
     basic: false
   },
   {
-    name: 'Sauce Barbecue',
+    name: 'Barbecue (Sauce)',
     basic: false
   },
   {
-    name: 'Vegetable Broccoli',
+    name: 'Broccoli (Vegetable)',
     basic: false
   },
   {
-    name: 'Sauce Hot',
+    name: 'Hot Sauce',
     basic: false
   },
   {
-    name: 'Pepper Cayenne',
+    name: 'Cayenne Pepper',
     basic: false
   },
   {
@@ -242,11 +242,11 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Vegetable Pepper Green',
+    name: 'Pepper Green (Vegetable)',
     basic: false
   },
   {
-    name: 'Ketchup',
+    name: 'Ketchup (Sauce)',
     basic: false
   },
   {
@@ -266,7 +266,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Cheese Cheddar',
+    name: 'Cheddar Cheese',
     basic: false
   },
   {
@@ -274,7 +274,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Cheese Cream',
+    name: 'Cream Cheese',
     basic: false
   },
   {
@@ -286,7 +286,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Beef Ground',
+    name: 'Ground Beef',
     basic: false
   },
   {
@@ -294,7 +294,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Pasta Noodles',
+    name: 'Noodles (Pasta)',
     basic: false
   },
   {
@@ -330,7 +330,7 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Vegetable Peas',
+    name: 'Peas (Vegetable)',
     basic: false
   },
   {
@@ -338,47 +338,47 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Fish Cod',
+    name: 'Cod (Fish)',
     basic: false
   },
   {
-    name: 'Fish Anchovy',
+    name: 'Anchovy (Fish)',
     basic: false
   },
   {
-    name: 'Fish Seabass',
+    name: 'Seabass (Fish)',
     basic: false
   },
   {
-    name: 'Fish Haddock',
+    name: 'Haddock (Fish)',
     basic: false
   },
   {
-    name: 'Fish Salmon',
+    name: 'Salmon (Fish)',
     basic: false
   },
   {
-    name: 'Fish Sardine',
+    name: 'Sardine (Fish)',
     basic: false
   },
   {
-    name: 'Fish Tuna',
+    name: 'Tuna (Fish)',
     basic: false
   },
   {
-    name: 'Fish Tuna (Can)',
+    name: 'Tuna (Fish in a can)',
     basic: false
   },
   {
-    name: 'Fish Trout',
+    name: 'Trout (Fish)',
     basic: false
   },
   {
-    name: 'Fish Swordfish',
+    name: 'Swordfish (Fish)',
     basic: false
   },
   {
-    name: 'Vegetable Asparagus',
+    name: 'Asparagus (Vegetable)',
     basic: false
   },
   {
@@ -394,35 +394,35 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Vegetable Artichoke',
+    name: 'Artichoke (Vegetable)',
     basic: false
   },
   {
-    name: 'Applesauce',
+    name: 'Applesauce (Sauce)',
     basic: false
   },
   {
-    name: 'Vegetable Bean',
+    name: 'Bean (Vegetable)',
     basic: false
   },
   {
-    name: 'Bean Black',
+    name: 'Black Bean',
     basic: false
   },
   {
-    name: 'Vegetable Carrot',
+    name: 'Carrot (Vegetable)',
     basic: false
   },
   {
-    name: 'Vegetable Celery',
+    name: 'Celery (Vegetable)',
     basic: false
   },
   {
-    name: 'Seafood Oyster',
+    name: 'Oyster (Seefood)',
     basic: false
   },
   {
-    name: 'Seafood Clams',
+    name: 'Clams (Seefod)',
     basic: false
   },
   {
@@ -438,23 +438,23 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Fruit Grapes',
+    name: 'Grapes (Fruit)',
     basic: false
   },
   {
-    name: 'Fruit Pear',
+    name: 'Pear (Fruit)',
     basic: false
   },
   {
-    name: 'Fruit Cherry',
+    name: 'Cherries (Fruit)',
     basic: false
   },
   {
-    name: 'Fruit Watermelon',
+    name: 'Watermelon (Fruit)',
     basic: false
   },
   {
-    name: 'Seafood Lobster',
+    name: 'Lobster (Seafood)',
     basic: false
   },
   {
@@ -462,27 +462,27 @@ const ingredients = [
     basic: false
   },
   {
-    name: 'Jam Strawberry',
+    name: 'Strawberry (Jam)',
     basic: false
   },
   {
-    name: 'Fruit Strawberry',
+    name: 'Strawberries (Fruit)',
     basic: false
   },
   {
-    name: 'Jam Peach',
+    name: 'Peach (Jam)',
     basic: false
   },
   {
-    name: 'Fruit Peach',
+    name: 'Peach (Fruit)',
     basic: false
   },
   {
-    name: 'Fruit Banana',
+    name: 'Banana (Fruit)',
     basic: false
   },
   {
-    name: 'Sugar White',
+    name: 'White Sugar',
     basic: false
   }
 ];
