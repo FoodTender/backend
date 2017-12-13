@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/foodtender');
-// mongoose.connect(process.env.mLabDB);
+// mongoose.connect('process.env.MLAB_DB');
 
 const Recipe = require('../models/recipe');
 const Ingredient = require('../models/ingredient');
@@ -25,8 +25,7 @@ const recipes = [
             unit: 'tsp'
         }
         ],
-
-        picture: '/recipes/omelette.jpg',
+        picture: '../../../assets/images/recipes/omelette.jpg',
         time: '5 minutes',
         servings: 1,
         directions: `1. Season the beaten eggs well with salt and pepper. 
@@ -122,7 +121,7 @@ const recipes = [
         }
         ],
 
-        picture: '/recipes/classic-spaghetti-blognese.jpg',
+        picture: '../../../assets/images/recipes/classic-spaghetti-bolognese.jpg',
         time: '30 minutes',
         servings: 4,
         directions: `1. Heat 1 1/2 tbsp oil in a large pan or flameproof casserole dish over a low-medium heat. 
@@ -199,7 +198,7 @@ const recipes = [
         }
         ],
 
-        picture: '/recipes/3-minutes-mug-cake.jpg',
+        picture: '../../../assets/images/recipes/3-minutes-mug-cake.jpg',
         time: '3 minutes',
         servings: 1,
         directions: `1. Pour all the ingredients in the mug and mix until it's homogeneous.
@@ -252,7 +251,7 @@ const recipes = [
             }
         ],
 
-        picture: '/recipes/cuban-rice.jpg',
+        picture: '../../../assets/images/recipes/cuban-rice.jpg',
         time: '40 minutes',
         servings: 4,
         directions: `1. Make the sofrito. 
@@ -322,7 +321,7 @@ const recipes = [
         }
         ],
 
-        picture: '/recipes/spanish-flan.jpg',
+        picture: '../../../assets/images/recipes/spanish-flan.jpg',
         time: '1h 20m',
         servings: 8,
         directions: `1. Preheat oven to 350 degrees F (175 degrees C).
@@ -397,7 +396,7 @@ const recipes = [
         }
         ],
 
-        picture: '/recipes/cordon-bleu.jpg',
+        picture: '../../../assets/images/recipes/cordon-bleu.jpg',
         time: '45min',
         servings: 2,
         directions: `1. Preheat oven to 180C/350F.
@@ -444,7 +443,7 @@ const recipes = [
         }
     ],
 
-        picture: '/recipes/wrapped-eggs.jpg',
+        picture: '../../../assets/images/recipes/wrapped-eggs.jpg',
         time: '20 min',
         servings: 6,
         directions: `1 Preheat oven 375 degrees. 
@@ -472,7 +471,7 @@ const recipes = [
             unit: 'Slices'
         }],
 
-        picture: '/recipes/bacon-sheets.jpg',
+        picture: '../../../assets/images/recipes/bacon-sheets.jpg',
         time: '10 mins',
         servings: 1,
         directions: `1. Line a baking sheet with Foil or Parchment Paper
@@ -521,7 +520,7 @@ const recipes = [
             unit: 'Frying pan'
         }],
 
-        picture: '/recipes/loaded-potato-bites.jpg',
+        picture: '../../../assets/images/recipes/loaded-potato-bites.jpg',
         time: '15 mins',
         servings: 4,
         directions: `1. In large bowl, mix mashed potatoes, cheese, 2 tablespoons of the chives, 
@@ -563,7 +562,7 @@ const recipes = [
             unit: 'Tbsp shredded'
         }],
 
-        picture: '/recipes/bacon-wrapped-mini-omalette.jpg',
+        picture: '../../../assets/images/recipes/bacon-wrapped-mini-omalettes.jpg',
         time: '40 mins',
         servings: 1,
         directions: `1. Put bacon strips in muffin tin and then add whipped eggs with a little cheese about 3/4 full.
@@ -596,7 +595,7 @@ const recipes = [
             unit: 'According to taste'
         }],
 
-        picture: '/recipes/roasted-bacon-cheesy-potatoes.jpg',
+        picture: '../../../assets/images/recipes/roasted-bacon-cheesy-potatoes.jpg',
         time: '70 mins',
         servings: 6,
         directions: `1. Preheat your oven to 425ºF with a rack in the middle position.
@@ -630,7 +629,7 @@ const recipes = [
             unit: 'Slices'
         }],
 
-        picture: '/recipes/bacon-potatoes.jpg',
+        picture: '../../../assets/images/recipes/bacon-potatoes.jpg',
         time: '45 mins',
         servings: 1,
         directions: `
