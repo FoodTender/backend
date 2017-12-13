@@ -8,6 +8,7 @@ const ingredientSchema = new Schema({
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
   });
 
+// --- Get Id from Name --- //
 ingredientSchema.statics.getIdFromName = function (name) {
   return this.findOne({ name: new RegExp('^' + name + '$', 'i') })
     .then(ingredient => {
@@ -24,6 +25,29 @@ ingredientSchema.statics.getIdsFromNames = function (names) {
   });
   return Promise.all(promises)
     .then((ids) => ids.filter(id => id));
+};
+
+// --- Get Name from Id --- //
+ingredientSchema.statics.getNameFromId = function (id) {
+  console.log('id');
+  console.log(id);
+  return this.findById({ id })
+    .then(ingredient => {
+      if (!ingredient) {
+        return null;
+      }
+      return ingredient.name;
+    });
+};
+
+ingredientSchema.statics.getNamesFromIds = function (ids) {
+  console.log('ids');
+  console.log(ids);
+  const promises = ids.map((id) => {
+    return this.getIdFromName(id);
+  });
+  return Promise.all(promises)
+    .then((names) => names.filter(name => name));
 };
 
 module.exports = mongoose.model('Ingredient', ingredientSchema);

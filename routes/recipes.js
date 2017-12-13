@@ -6,21 +6,35 @@ const Recipe = require('../models/recipe');
 // --- Get clicked recipe --- //
 router.get('/recipes/:id', (req, res, next) => {
     let recipeId = req.params.id;
-    console.log('USER');
-    console.log(req.user);
+
+    // Recipe.findById(recipeId)
+    //     .populate('ingredients.ingredient')
+    //     .exec(function (err, recipe) {
+    //         if (err) {
+    //             throw next(err);
+    //         }
+    //         console.log('The ingredient is ', recipe.ingredients.ingredient.name);
+    //     });
+
+    // console.log('USER');
+    // console.log(req.user);
 
     Recipe.findById(recipeId, (err, recipe) => {
         if (err) {
             throw next(err);
         }
+        // Ingredient.getNamesFromIds(recipe.ingredients)
+        //     .then((ingredientNames) => {
+        //         console.log(ingredientNames);
+        //     });
         res.json(recipe);
     });
 });
 
 // --- Get recipes by selected ingredients --- //
 router.get('/recipes', (req, res, next) => {
-    console.log('USER');
-    console.log(req.user);
+    // console.log('USER');
+    // console.log(req.user);
     let ingredients = req.query.ingredients || '';
     let resultantRecipes = [];
 
