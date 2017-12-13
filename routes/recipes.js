@@ -19,8 +19,6 @@ router.get('/recipes/:id', (req, res, next) => {
 
 // --- Get recipes by selected ingredients --- //
 router.get('/recipes', (req, res, next) => {
-    console.log('USER');
-    console.log(req.user);
     let ingredients = req.query.ingredients || '';
     let resultantRecipes = [];
     ingredients = ingredients.replace(/_/g, ' ');
