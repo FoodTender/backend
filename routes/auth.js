@@ -46,13 +46,13 @@ router.post('/signup', (req, res, next) => {
     return response.unprocessable(req, res, 'Missing mandatory field "Email".');
   }
   User.findOne({
-    email
-  }, 'email', (err, userExists) => {
+    username
+  }, 'username', (err, userExists) => {
     if (err) {
       return next(err);
     }
     if (userExists) {
-      return response.unprocessable(req, res, 'Email already in use.');
+      return response.unprocessable(req, res, 'USername already in use.');
     }
 
     const salt = bcrypt.genSaltSync(10);

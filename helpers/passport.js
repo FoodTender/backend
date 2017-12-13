@@ -14,9 +14,14 @@ function configurePassport () {
     done(null, user);
   });
 
-  passport.use(new LocalStrategy((username, email, password, next) => {
+  // const options = {
+  //   usernameField: 'email',
+  //   passwordField: 'password'
+  // };
+
+  passport.use(new LocalStrategy((username, password, next) => {
     User.findOne({
-      email
+      username
     }, (err, user) => {
       if (err) {
         return next(err);
