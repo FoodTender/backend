@@ -55,7 +55,7 @@ const recipes = [
         name: 'Classic spaghetti Bolognese',
 
         ingredients: [{
-            ingredient: 'Vegetable Onion',
+            ingredient: 'Onion (Vegetable)',
             quantity: 2,
             unit: 'Medium Size peeled and chopped'
         },
@@ -70,7 +70,7 @@ const recipes = [
             unit: 'Clove, peeled and crushed'
         },
         {
-            ingredient: 'Beef Minced',
+            ingredient: 'Minced Beef',
             quantity: 500,
             unit: 'g'
         },
@@ -90,12 +90,12 @@ const recipes = [
             unit: 'g chopped'
         },
         {
-            ingredient: 'Stock Beef',
+            ingredient: 'Beef Stock',
             quantity: 300,
             unit: 'ml hot'
         },
         {
-            ingredient: 'Sauce Tomato',
+            ingredient: 'Tomato Sauce',
             quantity: 1,
             unit: 'tbsp'
         },
@@ -105,17 +105,17 @@ const recipes = [
             unit: 'pinch'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: 'Pasta Spaghetti',
+            ingredient: 'Spaghetti (Pasta)',
             quantity: 350,
             unit: 'g'
         },
         {
-            ingredient: 'Cheese Parmesan',
+            ingredient: 'Parmesan Cheese',
             quantity: null,
             unit: null
         }
@@ -225,7 +225,7 @@ const recipes = [
         name: 'Cuban Rice',
         ingredients: [
             {
-                ingredient: 'Sauce Tomato',
+                ingredient: 'Tomato Sauce',
                 quantity: 1,
                 unit: 'cup'
             },
@@ -360,7 +360,7 @@ const recipes = [
             unit: 'small'
         },
         {
-            ingredient: 'Cheese Swiss',
+            ingredient: 'Swiss Cheese',
             quantity: 4,
             unit: 'slices'
         },
@@ -390,7 +390,7 @@ const recipes = [
             unit: 'pinch'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'pinch'
         }
@@ -437,7 +437,7 @@ const recipes = [
             unit: 'Teaspoon'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 0.5,
             unit: 'Teaspoon'
         }
@@ -590,7 +590,7 @@ const recipes = [
             unit: 'According to taste'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'According to taste'
         }],

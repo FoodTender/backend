@@ -22,7 +22,7 @@ router.get('/ingredients', (req, res, next) => {
     }
 });
 
-router.get('/ingredients/basic', (req, res, next) => {
+router.get('/ingredients/all', (req, res, next) => {
     Ingredient.find({}, (err, ingredient) => {
         if (err) {
             return next(err);
