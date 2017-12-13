@@ -7,28 +7,14 @@ const Recipe = require('../models/recipe');
 router.get('/recipes/:id', (req, res, next) => {
     let recipeId = req.params.id;
 
-    // Recipe.findById(recipeId)
-    //     .populate('ingredients.ingredient')
-    //     .exec(function (err, recipe) {
-    //         if (err) {
-    //             throw next(err);
-    //         }
-    //         console.log('The ingredient is ', recipe.ingredients.ingredient.name);
-    //     });
-
-    // console.log('USER');
-    // console.log(req.user);
-
-    Recipe.findById(recipeId, (err, recipe) => {
-        if (err) {
-            throw next(err);
-        }
-        // Ingredient.getNamesFromIds(recipe.ingredients)
-        //     .then((ingredientNames) => {
-        //         console.log(ingredientNames);
-        //     });
-        res.json(recipe);
-    });
+    Recipe.findById(recipeId)
+        .populate('ingredients.ingredient')
+        .exec(function (err, recipe) {
+            if (err) {
+                throw next(err);
+            }
+            res.json(recipe);
+        });
 });
 
 // --- Get recipes by selected ingredients --- //

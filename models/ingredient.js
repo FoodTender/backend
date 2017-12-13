@@ -27,27 +27,4 @@ ingredientSchema.statics.getIdsFromNames = function (names) {
     .then((ids) => ids.filter(id => id));
 };
 
-// --- Get Name from Id --- //
-ingredientSchema.statics.getNameFromId = function (id) {
-  console.log('id');
-  console.log(id);
-  return this.findById({ id })
-    .then(ingredient => {
-      if (!ingredient) {
-        return null;
-      }
-      return ingredient.name;
-    });
-};
-
-ingredientSchema.statics.getNamesFromIds = function (ids) {
-  console.log('ids');
-  console.log(ids);
-  const promises = ids.map((id) => {
-    return this.getIdFromName(id);
-  });
-  return Promise.all(promises)
-    .then((names) => names.filter(name => name));
-};
-
 module.exports = mongoose.model('Ingredient', ingredientSchema);
