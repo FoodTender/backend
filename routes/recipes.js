@@ -19,16 +19,12 @@ router.get('/recipes/:id', (req, res, next) => {
 
 // --- Get recipes by selected ingredients --- //
 router.get('/recipes', (req, res, next) => {
-    // console.log('USER');
-    // console.log(req.user);
     let ingredients = req.query.ingredients || '';
     let resultantRecipes = [];
-
     ingredients = ingredients.replace(/_/g, ' ');
 
     Ingredient.getIdsFromNames(ingredients.split(','))
         .then((ingredientIds) => {
-            // db.recipes.find({ingredients: {$all: ['Potato', 'Egg', 'Cheese', 'Bacon', 'Breadcrumbs']}, ingredients: {$size: 5}})
             Recipe.find({ 'ingredients.ingredient': ingredientIds }, (err, recipe) => {
                 if (err) {
                     throw next(err);
