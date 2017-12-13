@@ -79,6 +79,7 @@ router.post('/signup', (req, res, next) => {
 });
 
 router.post('/logout', (req, res) => {
+  console.log('logout backend');
   req.logout();
   return response.ok(req, res);
 });
