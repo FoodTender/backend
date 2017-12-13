@@ -67,7 +67,7 @@ app.use('/', index);
 app.use('/auth', auth);
 app.use('/', ingredients); // Change to /ingredients
 app.use('/', recipes); // Change to /recipes
-app.use('/me', me); // Here are the Bookmarks
+app.use('/', me); // Here are the Bookmarks
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
