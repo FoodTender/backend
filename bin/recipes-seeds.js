@@ -55,7 +55,7 @@ const recipes = [
         name: 'Classic spaghetti Bolognese',
 
         ingredients: [{
-            ingredient: 'Vegetable Onion',
+            ingredient: 'Onion (Vegetable)',
             quantity: 2,
             unit: 'Medium Size peeled and chopped'
         },
@@ -70,7 +70,7 @@ const recipes = [
             unit: 'Clove, peeled and crushed'
         },
         {
-            ingredient: 'Beef Minced',
+            ingredient: 'Minced Beef',
             quantity: 500,
             unit: 'g'
         },
@@ -90,12 +90,12 @@ const recipes = [
             unit: 'g chopped'
         },
         {
-            ingredient: 'Stock Beef',
+            ingredient: 'Beef Stock',
             quantity: 300,
             unit: 'ml hot'
         },
         {
-            ingredient: 'Sauce Tomato',
+            ingredient: 'Tomato Sauce',
             quantity: 1,
             unit: 'tbsp'
         },
@@ -105,17 +105,17 @@ const recipes = [
             unit: 'pinch'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'pinch'
         },
         {
-            ingredient: 'Pasta Spaghetti',
+            ingredient: 'Spaghetti (Pasta)',
             quantity: 350,
             unit: 'g'
         },
         {
-            ingredient: 'Cheese Parmesan',
+            ingredient: 'Parmesan Cheese',
             quantity: null,
             unit: null
         }
@@ -225,7 +225,7 @@ const recipes = [
         name: 'Cuban Rice',
         ingredients: [
             {
-                ingredient: 'Sauce Tomato',
+                ingredient: 'Tomato Sauce',
                 quantity: 1,
                 unit: 'cup'
             },
@@ -345,7 +345,7 @@ const recipes = [
         difficulty: 'Easy Peasy',
         calories: 490
     },
-// --- Chicken Cordon Bleu --- //
+    // --- Chicken Cordon Bleu --- //
     {
         name: 'Chicken Cordon Bleu',
 
@@ -360,7 +360,7 @@ const recipes = [
             unit: 'small'
         },
         {
-            ingredient: 'Cheese Swiss',
+            ingredient: 'Swiss Cheese',
             quantity: 4,
             unit: 'slices'
         },
@@ -390,7 +390,7 @@ const recipes = [
             unit: 'pinch'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'pinch'
         }
@@ -418,7 +418,7 @@ const recipes = [
         difficulty: 'Not so easy',
         calories: 590
     },
-        // --- Bacon Wrapped Eggs --- //
+    // --- Bacon Wrapped Eggs --- //
     {
         name: 'Bacon Wrapped Eggs',
         ingredients: [{
@@ -437,11 +437,11 @@ const recipes = [
             unit: 'Teaspoon'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 0.5,
             unit: 'Teaspoon'
         }
-    ],
+        ],
 
         picture: '../../../assets/images/recipes/wrapped-eggs.jpg',
         time: '20 min',
@@ -486,7 +486,7 @@ const recipes = [
         difficulty: 'Easy Peasy',
         calories: 153
     },
-      // --- Loaded Potato Bites --- //
+    // --- Loaded Potato Bites --- //
     {
         name: 'Loaded Potato Bites',
         ingredients: [{
@@ -565,10 +565,10 @@ const recipes = [
         picture: '../../../assets/images/recipes/bacon-wrapped-mini-omalettes.jpg',
         time: '40 mins',
         servings: 1,
-        directions: `1. Put bacon strips in muffin tin and then add whipped eggs with a little cheese about 3/4 full.
-        2. Bake at 350 degrees for 30-35 min.`,
+        directions: `1. Put bacon strips in muffin tin and then add whipped eggs with a little cheese about 3/4 full
+        2. Bake at 350 degrees for 30 - 35 min.`,
         ratings: 0,
-        difficulty: 'Eaesy Peasy',
+        difficulty: 'Easy Peasy',
         calories: 216
     },
     // --- Roasted Bacon Cheesy Potatoes --- //
@@ -590,7 +590,7 @@ const recipes = [
             unit: 'According to taste'
         },
         {
-            ingredient: 'Pepper Black',
+            ingredient: 'Black Pepper',
             quantity: 1,
             unit: 'According to taste'
         }],
@@ -599,17 +599,17 @@ const recipes = [
         time: '70 mins',
         servings: 6,
         directions: `1. Preheat your oven to 425ºF with a rack in the middle position.
-        2. Cut the bacon into half inch pieces and fry until crisp. Set the pieces aside on paper towels to drain, 
+        2. Cut the bacon into half inch pieces and fry until crisp.Set the pieces aside on paper towels to drain,
         do not discard the fat.
-        3. Pour 1 to 2 tablespoons of the bacon fat onto a rimmed baking sheet. You want enough to coat the bottom 
+        3. Pour 1 to 2 tablespoons of the bacon fat onto a rimmed baking sheet.You want enough to coat the bottom 
         of the sheet, but not so much that it pools.
-        4. Cut the potatoes up into roughly 1/2" cubes. Put on the baking sheet and toss with a spatula to coat with 
+        4. Cut the potatoes up into roughly 1 / 2" cubes. Put on the baking sheet and toss with a spatula to coat with 
         the bacon fat.
-        5. Roast the potatoes for 20 minutes, then toss with a spatula, roast for an additional 20 minutes. At this point 
-        check them. I usually toss them one more time, then let them go for another 15 minutes, but it all depends on 
-        how big the pieces are. They are done when all the sides are browned and crisp looking, but none should look 
+        5. Roast the potatoes for 20 minutes, then toss with a spatula, roast for an additional 20 minutes.At this point 
+        check them.I usually toss them one more time, then let them go for another 15 minutes, but it all depends on 
+        how big the pieces are.They are done when all the sides are browned and crisp looking, but none should look 
         burnt.
-        6. Remove the pan from the oven, season with salt and pepper, and top with your shredded cheese and bacon. Set the 
+        6. Remove the pan from the oven, season with salt and pepper, and top with your shredded cheese and bacon.Set the 
         oven to broil, and place the pan back in just long enough for the cheese to melt and bubble.`,
         ratings: 0,
         difficulty: 'Not so easy',
@@ -636,18 +636,18 @@ const recipes = [
         1. Peel and slice the Potato ALMOST all the way through.
         2. Then insert Bacon slices
         3. Bake in the oven with a little oil for 45 minutes at 400 degrees
-        (depending on the size of the potato)
+            (depending on the size of the potato)
         
         You can cook the Potato halfway before adding the bacon if you like.
-        The "Better but takes a lot longer" Procedure:
-        
+            The "Better but takes a lot longer" Procedure:
+
         1. Freeze your Bacon on a Baking sheet for about 30 minutes
         2. Cut the Potatoes stopping about 1/4 inch from the bottom
         3. Boil them for about 4 minutes
         4. Remove and pat dry
         5. Insert frozen Bacon pieces into the cuts on the potato
-        6. Melt some butter over the top and season (salt and pepper)
-        7. Then you can bake them at 350 for 2 hours if you have the time (425 for an hour if you have less time)
+        6. Melt some butter over the top and season(salt and pepper)
+        7. Then you can bake them at 350 for 2 hours if you have the time(425 for an hour if you have less time)
         8. Baste with melted butter halfway through.
         9. You can throw some Cheese on top when there's 6 minutes left (optional)
         10. Top with Onions, Parsley, etc...`,
@@ -655,22 +655,22 @@ const recipes = [
         difficulty: 'Easy Peasy',
         calories: 284
     }
-// {
-//         name: 'EXAMPLE',
-//         ingredients: [{
-//             ingredient: 'NAME',
-//             quantity: 0,
-//             unit: 'KIND'
-//         }],
+    // {
+    //         name: 'EXAMPLE',
+    //         ingredients: [{
+    //             ingredient: 'NAME',
+    //             quantity: 0,
+    //             unit: 'KIND'
+    //         }],
 
-//         picture: '/recipes/recipe.jpg',
-//         time: 'timestring',
-//         servings: 0,
-//         directions: `multilinestring`,
-//         ratings: 0,
-//         difficulty: 'level',
-//         calories: 0
-//     }
+    //         picture: '/recipes/recipe.jpg',
+    //         time: 'timestring',
+    //         servings: 0,
+    //         directions: `multilinestring`,
+    //         ratings: 0,
+    //         difficulty: 'level',
+    //         calories: 0
+    //     }
 ];
 
 function populateRecipeIngredient (recipe, index) {

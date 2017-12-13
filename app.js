@@ -16,6 +16,7 @@ const configurePassport = require('./helpers/passport');
 const index = require('./routes/index');
 const ingredients = require('./routes/ingredients');
 const recipes = require('./routes/recipes');
+const me = require('./routes/me');
 const auth = require('./routes/auth');
 
 // EXPRESS
@@ -64,12 +65,13 @@ app.use(cookieParser());
 
 app.use('/', index);
 app.use('/auth', auth);
-app.use('/', ingredients);
-app.use('/', recipes);
+app.use('/', ingredients); // Change to /ingredients
+app.use('/', recipes); // Change to /recipes
+app.use('/me', me); // Here are the Bookmarks
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-response.notFound(req, res);
+  response.notFound(req, res);
 });
 
 // NOTE: requires a views/error.ejs template
@@ -79,7 +81,7 @@ app.use((err, req, res, next) => {
 
   // only render if the error ocurred before sending the response
   if (!res.headersSent) {
-response.unexpectedError(req, res, err);
+    response.unexpectedError(req, res, err);
   }
 });
 
