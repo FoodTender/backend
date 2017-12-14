@@ -31,7 +31,6 @@ mongoose.connect(process.env.MONGODB_URI, {
   useMongoClient: true
 });
 
-// uncomment after placing your favicon in /public
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -65,16 +64,15 @@ app.use(cookieParser());
 
 app.use('/', index);
 app.use('/auth', auth);
-app.use('/', ingredients); // Change to /ingredients
-app.use('/', recipes); // Change to /recipes
-app.use('/', bookmarks); // Here are the Bookmarks
+app.use('/', ingredients);
+app.use('/', recipes);
+app.use('/', bookmarks);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   response.notFound(req, res);
 });
 
-// NOTE: requires a views/error.ejs template
 app.use((err, req, res, next) => {
   // always log the error
   console.error('ERROR', req.method, req.path, err);

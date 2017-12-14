@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt-nodejs');
 const response = require('../helpers/response');
 const User = require('../models/user').User;
 
+// --- POST login --- //
 router.post('/login', (req, res, next) => {
   if (req.user) {
     return response.forbidden();
@@ -26,6 +27,7 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 });
 
+// --- POST signup --- //
 router.post('/signup', (req, res, next) => {
   if (req.user) {
     return response.forbidden(req, res, 'Already logged in');
@@ -78,16 +80,17 @@ router.post('/signup', (req, res, next) => {
   });
 });
 
+// --- POST logout --- //
 router.post('/logout', (req, res) => {
   req.logout();
   return response.ok(req, res);
 });
 
+// --- GET me ---//
 router.get('/me', (req, res) => {
   if (req.user) {
     return response.data(req, res, req.user.asData());
   }
-
   return response.notFound(req, res);
 });
 

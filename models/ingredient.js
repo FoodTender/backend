@@ -8,7 +8,7 @@ const ingredientSchema = new Schema({
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
   });
 
-// --- Get Id from Name --- //
+// --- Get ids from names --- //
 ingredientSchema.statics.getIdFromName = function (name) {
   return this.findOne({ name: new RegExp('^' + name + '$', 'i') })
     .then(ingredient => {

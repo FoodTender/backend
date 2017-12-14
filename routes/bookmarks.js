@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user').User;
-const Recipe = require('../models/recipe');
 
+// --- GET all user bookmarks --- //
 router.get('/bookmarks', (req, res, next) => {
     User.findOne({ username: req.user.username }, 'bookmarks')
         .populate('bookmarks')
@@ -14,8 +14,8 @@ router.get('/bookmarks', (req, res, next) => {
         });
 });
 
+// --- PUT add bookmark --- //
 router.put('/bookmarks/:recipeId/add', (req, res, next) => {
-    console.log('route');
     let recipeId = req.params.recipeId;
 
     User.findOne({ username: req.user.username }, (err, user) => {
@@ -37,8 +37,8 @@ router.put('/bookmarks/:recipeId/add', (req, res, next) => {
     });
 });
 
+// --- DELETE remove bookmark --- //
 router.delete('/bookmarks/:recipeId/remove', (req, res, next) => {
-    console.log('route');
     let recipeId = req.params.recipeId;
 
     User.findOne({ username: req.user.username }, (err, user) => {
@@ -59,4 +59,5 @@ router.delete('/bookmarks/:recipeId/remove', (req, res, next) => {
         }
     });
 });
+
 module.exports = router;

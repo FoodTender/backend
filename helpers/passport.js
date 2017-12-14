@@ -14,11 +14,6 @@ function configurePassport () {
     done(null, user);
   });
 
-  // const options = {
-  //   usernameField: 'email',
-  //   passwordField: 'password'
-  // };
-
   passport.use(new LocalStrategy((username, password, next) => {
     User.findOne({
       username
